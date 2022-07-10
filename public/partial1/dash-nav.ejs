@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-lg position-relative bg-danger">
+
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Food Delivery</a>
+    <i class="burgerButton fa-solid fa-bars fa-2xl"></i>
+    <div class="d-none btnContainer position-absolute">
+      <button type="button" class="btn btn-dark">Confirm Order</button>
+      <button type="button" id="cancel" class="btn btn-dark">Cancel Order</button>
+      <button type="button" id="update" class="btn btn-dark">Update info</button>
+      <%- include('../partial1/dash-logout')%>
+      <div id="updateDiv" class=" d-none position-absolute d-flex justify-content-center">
+
+        <!-- this is to update the data in the database -->
+        <form action="">
+          <fieldset class="updateInfo d-flex justify-content-center flex-column w-75">
+            <div>
+          <label  for="updateAddress">update Address</label><br>
+          <input class="updateInput" id="updateAddress" type="text" name="user_address"><br>
+          <label for="updateNumber">Update number</label><br>
+          <input class="updateInput" id="updateNumber" type="text" name="user_number"><br>
+          <label  for="updateEmail">Update Email</label><br>
+          <input class="updateInput" id="updateEmail" type="text" name="user_email"><br>
+          <div class=" d-flex gap-2 mt-3">
+            <button id="updateConfirm" type="button" class="btn btn-dark">Update</button>
+            <button id="updateCancel" type="button" class="btn btn-dark">Cancel</button>
+          </div>
+        </fieldset>
+        </form>
+
+      </div>
+
+    <!-- div for the canellation of the order -->
+      <div id="cancellation" class="d-none position-absolute d-flex justify-content-center">
+
+        <form action="">
+          <fieldset class="updateInfo d-flex justify-content-center flex-column w-75">
+            <div>
+          <label  for="cancelOrder">Order-id</label><br>
+          <input class="cancelOrder" id="cancelOrder" type="text" name="updateName"><br>
+          <div class="d-flex gap-2 mt-3">
+            <button id="cancelConfirm" type="button" class="btn btn-dark">confirm</button>
+            <button id="notCancel" type="button" class="btn btn-dark">Cancel</button>
+          </div>
+          </div>
+        </fieldset>
+        </form>
+
+      </div>
+
+      <div id="menu">
+         
+      </div>
+
+    </nav>

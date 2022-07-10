@@ -1,0 +1,44 @@
+<main class="main-container d-flex bg-danger">
+  <div class="container1 d-flex align-items-center">
+    <div class="inside-container">
+      
+    <div class="d-flex flex-column align-items-center mb-5">
+      <h1 class="header">Food Delivery</h1>
+      <h2 class="">Hungry? Place an order</h2>
+    </div>
+    
+    <!-- login div -->
+      <div class="d-flex justify-content-center align-items-center mt-3">
+        <form id="form1" action="/login" method="POST">
+          <!-- this is msgs by is displayed by using express flash -->
+          <%if( messages.error) { %>
+            <p class="textcenter"><%= messages.error %></p>
+            <% } %>
+          <label for="">User Name</label><br>
+          <input id="user_name" class="input" name="username" type="text" required><br>
+          <label for="">Password</label><br>
+          <input id="password" class="input" name="password" type="password" required><br>
+          <div class="buttons d-flex gap-5">
+          <button type="submit" class="btn btn-outline-dark mt-3 p-2">Log In</button>
+          <a id="signIn" href="http://localhost:4000/sign">Sign In</a>
+        </div>
+        </form>
+
+      </div>
+  </div>
+</div>
+
+<!-- contact us div -->
+  <div class="container2 d-flex justify-content-center align-items-center">
+    <div class="inside-container2 d-flex justify-content-center align-items-center flex-column">
+      <h2 class="header">contact us</h2>
+      <p class="w-75 text-center">Follow us on Instagram and Facebook for updates of new restaurents and items</p>
+      <div class="icons d-flex justify-content-center align-items-center gap-3 mt-5">
+      <i class="fa-brands fa-facebook fa-xl"></i>
+      <i class="fa-brands fa-instagram fa-xl"></i>
+      <i class="fa-solid fa-envelope fa-xl"></i>
+      </div>
+    </div>
+  </div>
+
+</main>

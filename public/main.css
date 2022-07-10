@@ -1,0 +1,160 @@
+*{
+  padding: 0;
+  margin: 0;
+  font-family: 'Roboto', sans-serif;
+  color: white;
+}
+
+/* nav bar */
+.navbar{
+  padding: 1% 10%;
+  background-color:   #F6F6F6;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.collapse{
+  display: flex;
+  justify-content: end;
+}
+.nav-link{
+  position: relative;
+  font-size: 1rem;
+  color: white;
+}
+
+.navbar-brand{
+  color: white;
+}
+
+.navbar-brand:hover{
+  color: black;
+  transition:all 0.3s;
+}
+
+/* box */
+.main-container{
+  height: 650px;
+  width: 100%;
+  /* border: 1px solid black; */
+}
+
+/* inside the conatainer */
+.container1{
+  width: 70%;
+  height: 100%;
+  /* border:1px black solid */
+}
+
+/* inside the conatainer1 */
+
+.inside-container{
+  width: 100%;
+  height: 70%;
+}
+
+/* container2 */
+.container2{
+  height: 100%;
+  width: 30%;
+  border-left: 1px solid white;
+}
+
+/* inside container2 */
+.inside-container2{
+  margin-bottom: 200px;
+}
+
+/* header-section */
+.header{
+  font-weight: 900;
+  font-size: 3rem;
+}
+
+/* icons */
+.icons{
+  cursor: pointer;
+}
+
+/* inputs */
+.input{
+  color: black;
+}
+
+
+
+/* media query */
+
+@media all and (min-width: 768px) and (max-width: 1024px) {
+
+  .main-container{
+    flex-direction:column;
+    height: 750px;
+  }
+  .container1{
+    width: 100%;
+  }
+  .container2{
+    width: 100%;
+    margin-top: 100px;
+  }
+
+ }
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .main-container{
+    flex-direction:column;
+    height: 750px;
+  }
+  .container1{
+    width: 100%;
+  }
+  .container2{
+    width: 100%;
+    margin-top: 100px;
+  }
+ }
+/* sign In */
+ #signIn{
+  text-decoration: none;
+  color: black;
+  margin-top: 20px;
+  border: 1px solid black;
+  border-radius: 5px;
+  padding: 7px;
+  transition: 0.3s;
+}
+
+#signIn:hover{
+  background-color: black;
+  color: white;
+}
+
+#clickHere{
+  text-decoration: none;
+  color: black;
+  padding: 0;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+/* #clickHere:hover{
+  background-color: black;
+  color: white;
+} */
+
+@media all and (max-width: 480px) {
+  .main-container{
+    flex-direction:column;
+    height: 750px;
+  }
+  .container1{
+    width: 100%;
+  }
+  .container2{
+    width: 100%;
+    margin-top: 100px;
+  }
+ }
+
+

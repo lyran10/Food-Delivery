@@ -1,0 +1,220 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+
+body{
+  position: relative;
+}
+
+/* nav bar */
+.navbar{
+  padding: 1% 10%;
+  background-color:   #F6F6F6;
+  border-bottom: 1px solid white;
+  color: white;
+}
+
+.collapse{
+  display: flex;
+  justify-content: end;
+}
+.nav-link{
+  position: relative;
+  font-size: 1rem;
+  color: white;
+}
+
+.navbar-brand{
+  color: white;
+}
+
+.navbar-brand:hover{
+  color: black;
+  transition:all 0.3s;
+}
+
+
+/* search box */
+.box{
+  width: 500px;
+  height: 50px;
+  background-color:white;
+  border: solid 1px black;
+  border-radius: 30px;
+  padding: 10px;
+}
+
+.box > .input_field{
+  flex: 1;
+  border: none;
+  outline: none;
+}
+
+/* card */
+
+.card{
+  border-radius: 5px;
+  border: none;
+  box-sizing: border-box;
+  box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, 0.5)
+}
+/* ul and lists */
+ul{
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+li{
+  list-style: none;
+  padding: 5px;
+}
+
+/* img */
+img{
+  border-radius: 5px;
+}
+
+/* confirm div */
+
+.confirmdiv{
+  height: 721px;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.confirmorder{
+  height: 500px;
+  width: 500px;
+  border: black solid 1px;
+  border-radius: 5px;
+  background-color: white;
+
+}
+
+/* styling the updateDiv and cancellationDiv */
+#updateDiv,#cancellation{
+  width: 300px;
+  height: 150px;
+  background-color: red;
+  position: absolute;
+  top: 50px;
+  right: 0;
+  left: 20%;
+  bottom: 0;
+  z-index: 2;
+  border-radius: 5px;
+
+}
+
+/* increasing the height of the  updateDiv separately*/
+#updateDiv{
+  height: 250px;
+}
+
+/* loading word while fetching the data */
+#loading{
+  height: 550px;
+  width: 100%;
+}
+
+/*  */
+#infoD{
+  position: absolute;
+  height: 160px;
+  width: 200px;
+  background-color: red;
+  z-index: 3;
+}
+
+/* div where the info of the user is displayed */
+.info_of_user{
+  border-radius: 5px;
+  border: solid black 1px;
+  padding: 5px;
+  background-color: white;
+  color: black;
+}
+
+/* btnContainer is where all the buttons are in the nav bar */
+.btnContainer{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  top: 100%;
+  right: 0;
+  left: 70%;
+  bottom: 0;
+  height: 250px;
+  width: 200px;
+  background-color: red;
+  z-index: 5;
+}
+
+/* button in the nav bar where all the buttons are stored */
+.burgerButton{
+  cursor: pointer;
+}
+
+/* confirmed is the div that shows up after the order is confirmed */
+#confirmed{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: solid 1px black;
+  height: 100px;
+  width: 200px;
+  background-color: red;
+  z-index: 5;
+}
+
+/* media query */
+@media all and (min-width: 1024px) and (max-width: 1280px) {
+
+ }
+ 
+@media all and (min-width: 768px) and (max-width: 1024px) {
+  .btnContainer{
+    left: 60%;
+  }
+
+  .box{
+    width: 400px;
+    
+  }
+ 
+ }
+ 
+@media all and (min-width: 480px) and (max-width: 768px) {
+  .btnContainer{
+    left: 50%;
+  }
+
+  .box{
+    width: 400px;
+    
+  }
+ }
+ 
+@media all and (min-width: 480px) and (max-width : 655px) { 
+  .btnContainer{
+    left: 40%;
+  }
+}
+
+@media all and (max-width: 480px){ 
+  .btnContainer{
+    left: 25%;
+  }
+
+  .box{
+    width: 300px;
+    
+  }
+}

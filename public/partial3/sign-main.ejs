@@ -1,0 +1,48 @@
+<main class="main-container d-flex bg-danger">
+
+  <div class="container1 d-flex align-items-center">
+
+    <div class="inside-container">
+
+    <div class="d-flex flex-column align-items-center mb-5">
+      <h1 class="header">Sign In</h1>
+    </div>
+
+    <!-- sign up div -->
+      <p class="text-center"><%= userName %></p>
+      <div class="d-flex justify-content-center align-items-center">
+
+        <form id="form" action="/sign" method="POST">
+          <label for="">User Name</label><br>
+          <input id="user_name" class="input" name="user_name" type="text"  required><br>
+          <label for="">Password</label><br>
+          <input id="user_password" class="input" name="user_password" type="password" required><br>
+          <label for="">Address</label><br>
+          <input id="address" class="input" name="user_address" type="text" required><br>
+          <label for="">Phone Number</label><br>
+          <input id="phone_number" class="input" name="user_number" type="tel" required><br>
+          <label for="">Email</label><br>
+          <input id="email" class="input" name="user_email" type="text" required><br> 
+          <button type="submit" class="btn btn-outline-dark mt-3 p-2">Sign In</button>
+        </form>
+
+      </div>
+
+  </div>
+
+</div>
+
+<!-- contact us div -->
+  <div class="container2 d-flex justify-content-center align-items-center">
+    <div class="inside-container2 d-flex justify-content-center align-items-center flex-column">
+      <h2 class="header">contact us</h2>
+      <p class="text-center">Follow us on Instagram and Facebook for updates of new restaurents and items</p>
+      <div class="icons d-flex justify-content-center align-items-center gap-3 mt-5">
+      <i class="fa-brands fa-facebook fa-xl"></i>
+      <i class="fa-brands fa-instagram fa-xl"></i>
+      <i class="fa-solid fa-envelope fa-xl"></i>
+      </div>
+      
+    </div>
+  </div>
+</main>
