@@ -13,7 +13,7 @@ const router = require("./routes/routes.js")
 const db = require('./connections/connections.js');
 const passport = require('passport');
 const localStrategy = require("passport-local").Strategy
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcryptjs")
 const methodOverride = require("method-override")
 const port = process.env.PORT
 
