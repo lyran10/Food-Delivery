@@ -15,7 +15,7 @@ const passport = require('passport');
 const localStrategy = require("passport-local").Strategy
 const bcrypt = require("bcrypt")
 const methodOverride = require("method-override")
-const port = process.env.PORT || 8080
+const port = process.env.PORT
 
 dotenv.config();
  
@@ -176,6 +176,6 @@ function checkNotAuthenticated(req,res,next){
 }
 
 // server running on 4000
-app.listen(port||8080, () => {
+app.listen(port, () => {
   console.log(`listening to ${port}`)
 })
