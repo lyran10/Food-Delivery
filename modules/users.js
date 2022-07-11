@@ -7,15 +7,7 @@ const _createUser = (user) => {
   .returning('*')
 }
 
-// get the information by the username
-const _login = (user) => {
-  return db('users')
-  .where({user_name : user})
-  .returning("*")
-}
-
 // exporting the functions to the server.js
 module.exports = {
   _createUser,
-  _login
 }
