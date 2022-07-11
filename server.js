@@ -15,7 +15,7 @@ const passport = require('passport');
 const localStrategy = require("passport-local").Strategy
 const bcrypt = require("bcryptjs")
 const methodOverride = require("method-override")
-const port = process.env.PORT || 8080
+const port = process.env.PORT || 4000
 
 dotenv.config();
  
