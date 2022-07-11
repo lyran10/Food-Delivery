@@ -1,6 +1,9 @@
 {
   "name": "food-delivery",
   "version": "1.0.0",
+  "engines": {
+    "node" : "16.51.1"
+  },
   "description": "",
   "main": "server.js",
   "scripts": {
