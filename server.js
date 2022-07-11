@@ -1,7 +1,7 @@
 // variable to store the data and use in order.ejs
 let data
-
 //reqiuring all th dependencies
+const { _createUser} = require("./modules/users.js");
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -9,7 +9,7 @@ const flash = require("express-flash")
 const session = require("express-session")
 const bodyParser = require("body-parser")
 const router = require("./routes/routes.js")
-const {createUser} = require('./controllers/users.js');
+// const {createUser} = require('./controllers/users.js');
 const db = require('./connections/connections.js');
 const passport = require('passport');
 const localStrategy = require("passport-local").Strategy
@@ -120,7 +120,38 @@ app.get("/sign", checkNotAuthenticated,(req, res) => {
 
 // using a post method create a user and send it to the database with this api
 // createUser function in controllers/users.js'
-app.post("/sign",checkNotAuthenticated,createUser)
+app.post("/sign",checkNotAuthenticated, async (req,res) => {
+  data1 = req.flash("user name already used")
+  let password = req.body.user_password.toString()
+  let hashPassword = await bcrypt.hash(password,10)
+  //inserting all the information in obj
+  let obj = {user_name : req.body.user_name,
+              user_password : hashPassword,
+            user_address : req.body.user_address,
+            user_number : req.body.user_number,
+            user_email : req.body.user_email}
+
+    _createUser(req.body.user_name)
+  .then(result=>{// gettin g the data with the username
+    if(result.length >= 1){ // if results is greater than 0 means the username already exists in the database
+      req.flash("user","User name already exists")// showing a msg that the username exists and the database so choose another name
+      res.redirect("/sign")// redirect to the same page
+      console.log("already exists")
+    }else{// if results is 0 than insert the data in the data base by using knex and redirect to /login
+      res.redirect("/login")
+      console.log("created user")
+      return db('users')
+      .insert(obj)
+      .returning('*')
+    }
+  
+  })
+  .catch(err=>{
+    console.log(err);
+    res.status(404).json(err)
+  })
+
+})
 
 
 // api to render to the index file if he is authenticated, if he is it will redirect him to the /dash

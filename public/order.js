@@ -260,13 +260,14 @@ class order{
           li.innerHTML = `Items : ${string1.join("")}`// join it and put it in the l
           li1.innerHTML = `Total price : ${price}$`//same with price
           ul.append(li,li1)// append both in the ul
-          information.push(["order_id",orderId],["user_id",parseInt(id.innerHTML)],["item_name",string1.join("")],["price", price+"$"])
+          information.push(["order_id",orderId],["user_id",parseInt(id.innerHTML)],["item_name",string1.join("")],["price", ParseInt(price)])
 
 
           // if listOfItemsSelected is not greater than one, than do this
       }else{
         console.log(listOfItemsSelected[0])
-        information.push(["order_id",orderId],["user_id",parseInt(id.innerHTML)],["item_name",listOfItemsSelected[0].title],["price",listOfItemsSelected[0].price])// pushing it in the information array so that can send it to the database
+        information.push(["order_id",orderId],["user_id",parseInt(id.innerHTML)],["item_name",listOfItemsSelected[0].title],["price",
+        parseInt(listOfItemsSelected[0].price)])// pushing it in the information array so that can send it to the database
 
         information.forEach((ele,index) => {
           if(index === 0){
